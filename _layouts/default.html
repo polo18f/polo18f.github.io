@@ -5,36 +5,361 @@
   </head>
 
   <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
 
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
-        </header>
+    <header id="mainheader" class="it-header-wrapper it-header-sticky headerpnrr">
+   <div class="barrafvg it-header-slim-wrapper">
+      <div class="container it-header-slim-wrapper-content p-0">
+         <div class="it-header-slim-right-zone">
+            <div class="nav-item d-flex">
+               
+               <app-header-profile>
+                  <a class="btn btn-regione btn-icon btn-full">
+                     <span class="rounded-icon">
+                        <svg role="presentation" aria-label="utente" class="icon icon-primary">
+                           <use xlink:href="{{ site.url }}/assets/sprite.svg#it-user"></use>
+                        </svg>
+                     </span>
+                     <span class="d-none d-lg-block">Accedi all'area personale</span>
+                  </a>
+                  
+               </app-header-profile>
+               
+            </div>
+         </div>
       </div>
-    </div>
+   </div>
+   <div class="it-nav-wrapper">
+      <div class="it-header-center-wrapper">
+         <div class="container">
+            <div class="row">
+               <div class="col-12">
+                  <div class="it-header-center-content-wrapper">
+                     <div class="it-brand-wrapper">
+                        <a href="/it" class="" data-focus-mouse="false">
+                           <img alt="Polo Gabriel Jones" src="/logo.png?logodipartimentocentrale" style="height: 82px;">
+                           <div class="it-brand-text">
+                              <div class="it-brand-title">Polo Gabriel Jones</div>
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="it-header-navbar-wrapper">
+         <div class="container">
+            <div class="row">
+               <div class="col-12">
+                  <nav aria-label="Navigazione principale" class="navbar navbar-expand-lg has-megamenu">
+                     <button type="button" aria-controls="navC1" aria-expanded="false" aria-label="Mostra/Nascondi la navigazione" data-bs-target="#navC1" class="custom-navbar-toggler">
+                        <svg aria-label="Mostra/Nascondi la navigazione" class="icon">
+                           <use href="assets/bootstrap-italia/svg/sprite.svg#it-burger"></use>
+                        </svg>
+                     </button>
+                     <div id="navC1" class="navbar-collapsable">
+                        <div class="overlay"></div>
+                        <div class="close-div">
+                           <div type="button" class="btn close-menu">
+                              <span class="visually-hidden">Nascondi la navigazione</span>
+                              <svg aria-label="chiudi" class="icon icon-white">
+                                 <use href="assets/bootstrap-italia/svg/sprite.svg#it-close-big"></use>
+                              </svg>
+                           </div>
+                        </div>
+                        <div class="menu-wrapper">
+                           <ul data-element="main-navigation" class="navbar-nav">
+                              
+                              <li class="nav-item" id="menu_drop_down0">
+                                 <a routerlinkactive="active" class="nav-link ps-0" data-element="management" href="/chisiamo/"><span>About</span></a>
+                              </li>
+                              <li class="nav-item" id="menu_drop_down1">
+                                 <a routerlinkactive="active" class="nav-link" data-element="news" href="/progetti/"><span>Progetti</span></a>
+                              </li>
+                              <li class="nav-item" id="menu_drop_down2">
+                                 <a routerlinkactive="active" class="nav-link" data-element="all-services" href="/servizi7"><span>Servizi</span></a>
+                              </li>
+                              <li class="nav-item" id="menu_drop_down3">
+                                 <a routerlinkactive="active" class="nav-link" data-element="live" href="/FOIA/"><span>FOIA</span></a>
+                              </li>
+                              
+                           </ul>
+                           <ul class="navbar-nav" style="justify-content: flex-end;">
+                              
+                              <li class="nav-item" id="menu_drop_down_right0">
+                                 <a class="nav-link ps-0" target="_self" href="/areapersonale/">Area Personale</a>
+                              </li>
+                              
+                           </ul>
+                        </div>
+                     </div>
+                  </nav>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</header>
 
     <div id="main" role="main" class="container">
       {{ content }}
     </div>
 
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
-      </div>
-    </div>
 
-    {% include analytics.html %}
+  
+  
+  
+  <footer id="footer" class="it-footer">
+   <div class="it-footer-main">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-2"><img loading="lazy" src="https://italia.github.io/design-comuni-pagine-statiche/assets/images/logo-eu-inverted.svg" alt="logo Unione Europea" class="ue-logo" style="width: 178px; height: 56px; max-width: 100%;"></div>
+            <!---->
+            <div class="col-md-10 mb-3">
+               <div class="it-brand-wrapper p-0">
+                  <a title="Polo Gabriel Jones" href="/it">
+                     <img loading="lazy" alt="Logo Polo Gabriel Jones" src="/logo.png" style="height: 48px;">
+                     <div class="it-brand-text ms-3"> Polo Gabriel Jones </div>
+                     <!---->
+                  </a>
+               </div>
+            </div>
+         </div>
+         <div class="clearfix"></div>
+         <div class="row">
+            <div class="col-md-12">
+               <div>
+                  <button aria-label="modifica l'elemento" class="edit edit-btn">
+                     <svg aria-label="icona" class="icon">
+                        <use xlink:href="assets/bootstrap-italia/svg/sprite.svg#it-pencil"></use>
+                     </svg>
+                  </button>
+                  <div class="row">
+                     <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="footer-heading-title">
+                           <!----><!----><a href="/it/amministrazione-190359"> Amministrazione </a><!----><!---->
+                        </div>
+                        <!----><!---->
+                        <ul class="footer-list clearfix">
+                           <li>
+                              <!----><a href="/it/amministrazione-190359/organi-di-governo-190361"><span>Organi di governo</span></a><!----><!----><!----><!---->
+                           </li>
+                           <li>
+                              <!----><a href="/it/amministrazione-190359/aree-amministrative-190360"><span>Aree amministrative</span></a><!----><!----><!----><!---->
+                           </li>
+                           <li>
+                              <!----><a href="/it/amministrazione-190359/uffici-190363"><span>Uffici</span></a><!----><!----><!----><!---->
+                           </li>
+                           <li>
+                              <!----><a href="/it/amministrazione-190359/politici-190374"><span>Politici</span></a><!----><!----><!----><!---->
+                           </li>
+                           <li>
+                              <!----><a href="/it/amministrazione-190359/personale-amministrativo-190373"><span>Personale amministrativo</span></a><!----><!----><!----><!---->
+                           </li>
+                           <li>
+                              <!----><a href="/it/amministrazione-190359/documenti-e-dati-190375"><span>Documenti e dati</span></a><!----><!----><!----><!---->
+                           </li>
+                           <!---->
+                        </ul>
+                     </div>
+                     <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="footer-heading-title">
+                           <!----><!----><a href="/it/servizi-190365"> Categorie dei servizi </a><!----><!---->
+                        </div>
+                        <!----><!---->
+                        <ul class="footer-list clearfix">
+                           <li>
+                              <!----><a href="/it/servizi-190365/vita-lavorativa-299115"><span>Vita lavorativa</span></a><!----><!----><!----><!---->
+                           </li>
+                           <li>
+                              <!----><a href="/it/servizi-190365/cultura-e-tempo-libero-267618"><span>Cultura e tempo libero</span></a><!----><!----><!----><!---->
+                           </li>
+                           <li>
+                              <!----><a href="/it/servizi-190365/ambiente-265143"><span>Ambiente</span></a><!----><!----><!----><!---->
+                           </li>
+                           <li>
+                              <!----><a href="/it/servizi-190365/anagrafe-e-stato-civile-192927"><span>Anagrafe e stato civile</span></a><!----><!----><!----><!---->
+                           </li>
+                           <li>
+                              <!----><a href="/it/servizi-190365/autorizzazioni-192883"><span>Autorizzazioni</span></a><!----><!----><!----><!---->
+                           </li>
+                           <li>
+                              <!----><a href="/it/servizi-190365/catasto-e-urbanistica-249592"><span>Catasto e urbanistica</span></a><!----><!----><!----><!---->
+                           </li>
+                           <li>
+                              <!----><a href="/it/servizi-190365/educazione-e-formazione-192934"><span>Educazione e formazione</span></a><!----><!----><!----><!---->
+                           </li>
+                           <!---->
+                        </ul>
+                     </div>
+                     <div class="col-lg-3 col-md-3 col-sm-6">
+                        <!---->
+                        <div class="menu-bar-h4"><span style="vertical-align: middle;">&nbsp;</span></div>
+                        <!---->
+                        <ul class="footer-list clearfix">
+                           <li>
+                              <!----><a href="/it/servizi-190365/giustizia-e-sicurezza-pubblica-192929"><span>Giustizia e sicurezza pubblica</span></a><!----><!----><!----><!---->
+                           </li>
+                           <li>
+                              <!----><a href="/it/servizi-190365/imprese-e-commercio-240052"><span>Imprese e commercio</span></a><!----><!----><!----><!---->
+                           </li>
+                           <li>
+                              <!----><a href="/it/servizi-190365/mobilita-e-trasporti-192928"><span>Mobilità e trasporti</span></a><!----><!----><!----><!---->
+                           </li>
+                           <li>
+                              <!----><a href="/it/servizi-190365/salute-benessere-e-assistenza-246862"><span>Salute, benessere e assistenza</span></a><!----><!----><!----><!---->
+                           </li>
+                           <li>
+                              <!----><a href="/it/servizi-190365/tributi-finanze-e-contravvenzioni-192925"><span>Tributi, finanze e contravvenzioni</span></a><!----><!----><!----><!---->
+                           </li>
+                           <!---->
+                        </ul>
+                     </div>
+                     <div class="col-lg-3 col-md-3 col-sm-6">
+                        <div class="footer-heading-title">
+                           <!----><!----><a href="/it/novita-190366"> Novità </a><!----><!---->
+                        </div>
+                        <!----><!---->
+                        <ul class="footer-list clearfix">
+                           <li>
+                              <!----><a href="/it/novita-190366/notizie-190367"><span>Notizie</span></a><!----><!----><!----><!---->
+                           </li>
+                           <li>
+                              <!----><a href="/it/novita-190366/comunicati-190368"><span>Comunicati</span></a><!----><!----><!----><!---->
+                           </li>
+                           <li>
+                              <!----><a href="/it/novita-190366/avvisi-190369"><span>Avvisi</span></a><!----><!----><!----><!---->
+                           </li>
+                           <li>
+                              <!----><!----><!----><span><span><br></span></span><!----><!---->
+                           </li>
+                           <li>
+                              <!---->
+                              <a href="/it/vivere-il-comune-190370">
+                                 <span>
+                                    <div class="footer-heading-title">Vivere il Comune</div>
+                                 </span>
+                              </a>
+                              <!----><!----><!----><!---->
+                           </li>
+                           <li>
+                              <!----><a href="/it/vivere-il-comune-190370/luoghi-190371"><span>Luoghi</span></a><!----><!----><!----><!---->
+                           </li>
+                           <li>
+                              <!----><a href="/it/vivere-il-comune-190370/eventi-190372"><span>Eventi</span></a><!----><!----><!----><!---->
+                           </li>
+                           <!---->
+                        </ul>
+                     </div>
+                     <!---->
+                  </div>
+               </div>
+               <div>
+                  <button aria-label="modifica l'elemento" class="edit edit-btn">
+                     <svg aria-label="edit" class="icon">
+                        <use xlink:href="assets/bootstrap-italia/svg/sprite.svg#it-pencil"></use>
+                     </svg>
+                  </button>
+                  <div class="row">
+                     <div class="col-md-3 col-sm-3">
+                        <div class="footer-heading-title"><a href="/it/contatti-190668">Contatti</a></div>
+                        <!----><!---->
+                        <p>
+                           <strong>Polo Gabriel Jones</strong><br><span>Piazza del Popolo, 38 <br>33078 San Vito al Tagliamento (PN)</span><br><br><span><strong>Telefono</strong> 0434842911<br></span><!----><!----><!----><span><strong>C.F.</strong> 80003930932<br></span><!----><span><strong>P.IVA</strong> 00242130938<br></span><!----><span style="font-size: small;"><strong>PEC </strong><a href="mailto:comune.sanvitoaltagliamento@certgov.fvg.it">comune.sanvitoaltagliamento@certgov.fvg.it</a><br></span><!---->
+                        </p>
+                     </div>
+                     <div class="col-md-3 col-sm-6">
+                        <div class="footer-heading-title">
+                           <!----><a href="/it/amministrazione-trasparente-4864" class="" data-focus-mouse="false"> Amministrazione Trasparente </a><!----><!----><!----><!----><!----><!----><!---->
+                        </div>
+                        <p>
+                           <span>
+                        <p><a href="it/amministrazione-trasparente-4864/bandi-di-gara-e-contratti-4849">Bandi di gara e contratti</a><br><a href="it/amministrazione-trasparente-4864/bandi-di-concorso-5042">Bandi di concorso</a><br><a href="it/albo-pretorio-3857">Albo pretorio</a></p></span><!----><!----></p>
+                     </div>
+                     <div class="col-md-3 col-sm-6">
+                        <div class="footer-heading-title">Utilità</div>
+                        <!----><!---->
+                        <p>
+                           <span>
+                        <p><a href="/it/servizi-online-21467/segnalazione-disservizio-192890" data-element="report-inefficiency">Segnalazione disservizio</a>&nbsp;<br><a href="/user/survey_edit/093041/7147">Richiesta d'assistenza</a>&nbsp;<br><a href="/it/faq" data-element="faq">Leggi le FAQ</a>&nbsp;<br>&nbsp;</p><p><a href="/it/trasparenza-nel-servizio-di-gestione-dei-rifiuti-urbani-e-assimilati-244647">Trasparenza nel servizio di gestione dei rifiuti urbani e assimilati</a></p><p>&nbsp;</p></span><!----><!----></p>
+                     </div>
+                     <div class="col-md-3 col-sm-6">
+                        <div class="menu-bar-h4">&nbsp;<span class="visually-hidden">footer contatti</span></div>
+                        <div>
+                           <p><a href="/it/prenota-un-appuntamento-192891" data-element="appointment-booking">Prenota un appuntamento</a></p>
+                        </div>
+                        <!----><!---->
+                        <ul class="list-inline text-left social">
+                           <li class="list-inline-item">
+                              <a aria-label="Facebook" target="_blank" href="https://www.facebook.com/sanvitoaltagliamento.cultura.turismo">
+                                 <svg aria-label="icona" class="icon">
+                                    <use xlink:href="assets/bootstrap-italia/svg/sprite.svg#it-facebook"></use>
+                                 </svg>
+                              </a>
+                           </li>
+                           <!----><!---->
+                           <li class="list-inline-item">
+                              <a aria-label="Telegram" target="_blank" href="https://t.me/SanVitoINFO">
+                                 <svg aria-label="icona" class="icon">
+                                    <use xlink:href="assets/bootstrap-italia/svg/sprite.svg#it-telegram"></use>
+                                 </svg>
+                              </a>
+                           </li>
+                           <!---->
+                           <li class="list-inline-item">
+                              <a aria-label="instagram" target="_blank" href="https://www.instagram.com/sanvitoaltagliamentofficial/">
+                                 <svg aria-label="icona" class="icon">
+                                    <use xlink:href="assets/bootstrap-italia/svg/sprite.svg#it-instagram"></use>
+                                 </svg>
+                              </a>
+                           </li>
+                           <!---->
+                           <li class="list-inline-item">
+                              <a aria-label="youtube" target="_blank" href="https://www.youtube.com/channel/UCOiwTk1f7D9rTxdm9lcrvjQ">
+                                 <svg aria-label="icona" class="icon">
+                                    <use xlink:href="assets/bootstrap-italia/svg/sprite.svg#it-youtube"></use>
+                                 </svg>
+                              </a>
+                           </li>
+                           <!---->
+                           <li class="list-inline-item">
+                              <a aria-label="whatsapp" target="_blank" href="https://wa.me/+393357209797">
+                                 <svg aria-label="icona" class="icon">
+                                    <use xlink:href="assets/bootstrap-italia/svg/sprite.svg#it-whatsapp"></use>
+                                 </svg>
+                              </a>
+                           </li>
+                           <!----><!----><!---->
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-12">
+               <section class="footer-bottom clearfix ps-0 pe-0 pb-3 pt-3">
+                  <div class="row">
+                     <div class="col-md-10">
+                        <button aria-label="modifica l'elemento" class="edit edit-btn">
+                           <svg aria-label="icona" class="icon">
+                              <use xlink:href="assets/bootstrap-italia/svg/sprite.svg#it-pencil"></use>
+                           </svg>
+                        </button>
+                        <h3 class="sr-only visually-hidden">Link utili</h3>
+                        <a target="_blank" href="https://form.agid.gov.it/view/31b888d0-94a4-11f0-abea-d181d5363788" data-element="accessibility-link"> Dichiarazione di accessibilità </a><!----><!----><!----> | <!----><!----><a href="/it/monitoraggio-sito-web-187596"> Monitoraggio sito web </a><!----><!----> | <!----><!----><a data-element="privacy-policy-link" href="/it/amministrazione-trasparente-4864/altri-contenuti-4931/privacy-4860/privacy-policy-3860"> Privacy Policy </a><!----><!----> | <!----><!----><a data-element="legal-notes" href="/it/note-legali-187595"> Note legali </a><!----><!----> | <!----><!----><a href="/it/feedback-accessibilita-192885"> Feedback accessibilità </a><!----><!----> | <!----><!----><a href="/it/attuazione-misure-pnrr-184164"> Attuazione misure PNRR </a><!----><!----> | <!----><!----><a href="/it/servizi-online-21467/reclami-101038"> Reclami </a><!----><!----> | <!----><!----><a routerlink="/it/performance-info" href="/it/performance-info">Piano di miglioramento del sito</a> | <a href="https://redazione-comuni.regione.fvg.it/applicativelogin">Accesso operatore</a> | <!----><!----><a href="javascript:void(0)" id="open_preferences_center">Cambio preferenze cookie</a><!---->
+                     </div>
+                     <div class="col-sm-12 col-xl-2 d-flex justify-content-start mt-3">
+                        <div>
+                           <span><a target="blank" aria-label="Insiel" href="https://www.insiel.it/" title="Insiel" width="65px" height="23px"><img loading="lazy" src="assets/img/logo-insiel-bianco-2.png" width="65px" height="23px" alt="Logo Insiel" style="margin-right: 10px; height: 23px !important;"></a></span><!----><span><a target="blank" aria-label="Prodigys Group" href="https://www.prodigys.it/" title="Insiel" width="95px" height="24px"><img loading="lazy" src="assets/img/logo-prodigys-w-2.png" alt="Logo Prodigys" width="95px" height="24px" style="height: 24px !important;"></a></span><!---->
+                        </div>
+                     </div>
+                  </div>
+               </section>
+            </div>
+         </div>
+      </div>
+   </div>
+</footer>
   </body>
 </html>
